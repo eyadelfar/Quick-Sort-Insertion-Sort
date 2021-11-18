@@ -8,7 +8,6 @@ void Swap(int *a,int *b){
     *b=temp;
 }
 
-
 void Insertion_Sort(int array[], int size) {
 for (int step = 1; step < size; step++) {
     int key = array[step];
@@ -22,15 +21,9 @@ for (int step = 1; step < size; step++) {
 }
 }
 
-
-
-
-
 // function to find the partition position
 int partition(int array[], int low, int high) {
-
 int pivot = array[high];
-
 int i = (low - 1);
 
 for (int j = low; j < high; j++) {
@@ -57,14 +50,12 @@ for (int i = 0; i < size; ++i)
 printf("\n");
 }
 
-
-
 void main(){
         int arr[100000];
     int size= sizeof(arr)/sizeof(arr[1]);
     for(int i = 0;i<size;i++)
         arr[i]=rand()%100000;
-
+    printf("Array of 100000 numbers is initialized");
 
     clock_t begin = clock();
     printf("\nInsertion Sort: ");
@@ -79,6 +70,4 @@ void main(){
     end = clock();
     double time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
     printf("The elapsed time is %lf seconds\n", time_spent);
-
-
 }
